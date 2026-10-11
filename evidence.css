@@ -1,0 +1,86 @@
+/* Implementation evidence only; existing project layout and type scale retained. */
+.implementation-panel {
+  margin-top:28px;
+  padding:24px 26px;
+  border:1px solid var(--line);
+  border-radius:4px;
+  background:#f2f5f6;
+}
+.implementation-heading { margin-bottom:18px; }
+.implementation-heading h4 {
+  margin-top:7px;
+  font-size:var(--type-subhead,17px);
+  font-weight:650;
+  line-height:1.65;
+}
+.implementation-grid {
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:30px;
+}
+.implementation-grid h5 {
+  margin:0 0 8px;
+  font-size:var(--type-body,15px);
+  line-height:1.7;
+  font-weight:600;
+  color:var(--blue);
+}
+.implementation-grid p {
+  font-size:var(--type-body,15px);
+  color:var(--muted);
+  line-height:1.85;
+}
+.implementation-note {
+  margin-top:17px;
+  padding-top:13px;
+  border-top:1px solid var(--line);
+  font-size:var(--type-note,12px);
+  line-height:1.85;
+  color:#667783;
+}
+.implementation-grid code { font-family:var(--mono); font-size:.9em; }
+.evidence-links {
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px 25px;
+  margin-top:18px;
+}
+.evidence-links .text-link {
+  font-size:var(--type-meta,13px);
+  color:var(--blue);
+  text-decoration:underline;
+  text-underline-offset:4px;
+}
+.evidence-links .text-link:hover { color:var(--accent); }
+.code-evidence .details-content { min-width:0; }
+.code-block {
+  max-width:100%;
+  overflow-x:auto;
+  margin:15px 0;
+  padding:20px;
+  border:1px solid var(--line);
+  border-radius:4px;
+  background:#edf2f4;
+  color:var(--blue);
+  font-size:13px;
+  line-height:1.85;
+  tab-size:4;
+}
+.code-block code { font:inherit; font-family:var(--mono); }
+.code-block:focus-visible { outline:3px solid var(--accent); outline-offset:3px; }
+@media screen and (max-width:760px) {
+  .implementation-panel { margin-top:22px; padding:20px; }
+  .implementation-grid { grid-template-columns:1fr; gap:18px; }
+  .implementation-heading { margin-bottom:15px; }
+  .code-block { padding:15px; font-size:12px; }
+}
+@media print {
+  .implementation-panel { margin-top:14px; padding:12px; background:white; }
+  .implementation-heading { margin-bottom:10px; }
+  .implementation-heading h4 { font-size:12px; }
+  .implementation-grid { gap:18px; }
+  .implementation-grid h5,.implementation-grid p { font-size:10px; }
+  .implementation-note { margin-top:10px; padding-top:8px; font-size:8px; }
+  .evidence-links { gap:8px 18px; margin-top:10px; }
+  .evidence-links .text-link { font-size:9px; }
+}

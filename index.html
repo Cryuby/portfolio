@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="류의재의 데이터 처리 파이프라인, 영상과 시선 데이터 연결, RAG 지식 구성 프로젝트와 구현 근거.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#163d54">
+  <title>류의재 | Uijae Ryu — Data & AI Project Portfolio</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="typography.css">
+  <link rel="stylesheet" href="evidence.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">본문으로 이동</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="wordmark" href="#top" aria-label="류의재 포트폴리오 처음으로">UIJAE RYU<span>류의재</span></a>
+      <nav aria-label="주요 메뉴">
+        <a href="#projects">Projects</a>
+        <a href="#research">Research</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="intro wrap" id="top" aria-labelledby="intro-title">
+      <div class="intro-copy">
+        <p class="eyebrow">DATA & AI PROJECT PORTFOLIO</p>
+        <h1 id="intro-title">류의재<span class="name-en">Uijae Ryu</span></h1>
+        <p class="intro-field">데이터 파이프라인 / 멀티모달 분석 / AI 서비스</p>
+        <p class="intro-text">산업 이상탐지, 헬스케어 데이터 분석과 RAG 서비스 개발을 경험했습니다. 각 프로젝트에서 다룬 데이터와 구현 내용, 검증 결과를 정리했습니다.</p>
+        <div class="intro-links">
+          <a class="button primary" href="#projects">프로젝트 보기 <span aria-hidden="true">↓</span></a>
+          <a class="text-link" href="mailto:ruby3288@naver.com">ruby3288@naver.com <span aria-hidden="true">↗</span></a>
+          <a class="text-link" href="https://github.com/Cryuby" target="_blank" rel="noopener noreferrer">GitHub 프로필 <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="intro-education"><span class="label">EDUCATION</span><p>한양대학교 데이터사이언스학부<br><span>2027.02 학사 졸업 예정</span></p></div>
+      </div>
+      <aside class="overview" aria-label="주요 프로젝트의 데이터 흐름 요약">
+        <div class="overview-top"><span class="label">PROJECT OVERVIEW</span><span class="tiny-mark" aria-hidden="true">01 — 03</span></div>
+        <a class="overview-row" href="#industrial">
+          <span class="overview-number">01</span><div><h2>산업 데이터 처리</h2><p>점군 전처리 → 검증과 실험 기록</p></div><span aria-hidden="true">↗</span>
+        </a>
+        <a class="overview-row" href="#healthcare">
+          <span class="overview-number">02</span><div><h2>헬스케어 분석</h2><p>영상과 시선 연결 → 프레임별 특징</p></div><span aria-hidden="true">↗</span>
+        </a>
+        <a class="overview-row" href="#todoc">
+          <span class="overview-number">03</span><div><h2>RAG 서비스</h2><p>공공 문서와 기록 → 개인화 상담</p></div><span aria-hidden="true">↗</span>
+        </a>
+        <div class="overview-bottom"><span class="label">RESEARCH PRACTICE</span><p>입력 검증<span aria-hidden="true">/</span>단계별 구현<span aria-hidden="true">/</span>결과 기록</p></div>
+      </aside>
+    </section>
+
+    <section id="projects" class="projects wrap" aria-labelledby="projects-title">
+      <div class="section-heading"><div><p class="eyebrow">01 / SELECTED PROJECTS</p><h2 id="projects-title">프로젝트</h2></div><p>데이터 흐름, 구현 범위와 검증 근거</p></div>
+
+      <article class="project" id="industrial" aria-labelledby="industrial-title">
+        <div class="project-heading"><span class="project-index">01</span><div><p class="project-category">INDUSTRIAL ANOMALY DETECTION</p><h3 id="industrial-title">산업 이상탐지와 실험 파이프라인</h3><p class="project-affiliation">한양대학교 MLLM 연구실 · 2025.01–현재</p></div><span class="status">ICLR 2027 제출·심사 중</span></div>
+        <div class="project-split">
+          <div class="project-copy">
+            <p class="project-summary">정상 참조와 검사 대상의 형상 차이로 결함을 찾는 3D 이상탐지 연구입니다. 전처리부터 정합, 이상점수 산출과 평가까지 하나의 실험 파이프라인으로 구현했습니다.</p>
+            <dl class="case-list">
+              <div><dt>역할</dt><dd>MARS 개인 연구 주도. 방법론 설계와 파이프라인 구현, 비교 실험 및 제1저자 논문 작성</dd></div>
+              <div><dt>문제</dt><dd>데이터와 설정이 흩어져 입력 오류를 실행 후에 발견했고, 결과가 나온 조건을 확인하기 어려웠습니다.</dd></div>
+              <div><dt>구현</dt><dd>입력과 설정의 일치 검증, 작은 데이터 기반 스모크 테스트, 단계별 처리와 설정·로그·산출물 기록</dd></div>
+              <div><dt>검증</dt><dd>관측 방식과 정합, 잔차 표현을 분리한 비교 실험. 정확도뿐 아니라 계산 비용과 조건별 안정성 확인</dd></div>
+            </dl>
+            <ul class="tags" aria-label="사용 기술 및 방법"><li>Python</li><li>3D Point Cloud</li><li>ICP</li><li>Statistical Calibration</li></ul>
+          </div>
+          <figure class="point-figure">
+            <div class="figure-header"><span class="label">GEOMETRIC COMPARISON</span><span class="figure-note">설명용 모식도</span></div>
+            <canvas id="point-cloud" width="640" height="340" role="img" aria-label="정상 참조와 검사 대상의 위치 차이를 줄인 뒤 국소 잔차를 확인하는 설명용 점군 모식도">정상 참조와 검사 대상을 정합한 뒤 잔차로 국소 차이를 확인하는 설명용 점군 모식도입니다.</canvas>
+            <div class="stage-buttons" role="group" aria-label="점군 모식도 단계 선택">
+              <button type="button" data-stage="input" aria-pressed="false">01 입력</button>
+              <button type="button" data-stage="aligned" aria-pressed="true">02 정합</button>
+              <button type="button" data-stage="residual" aria-pressed="false">03 잔차</button>
+            </div>
+            <figcaption id="point-caption" aria-live="polite">위치 차이를 줄여 정상 형상과 검사 대상을 같은 조건에서 비교</figcaption>
+            <p class="visual-disclaimer">임의 생성 점군으로 구성한 모식도. 실제 추론 결과나 벤치마크 데이터가 아닙니다.</p>
+          </figure>
+        </div>
+        <div class="pipeline" aria-label="연구 파이프라인">
+          <div><span>01</span><strong>입력 검증</strong><small>데이터 / 정상 참조 / 설정</small></div>
+          <div><span>02</span><strong>전처리와 정합</strong><small>비교 조건 일치</small></div>
+          <div><span>03</span><strong>잔차와 이상점수</strong><small>다중 범위 통계 / 정상 보정</small></div>
+          <div><span>04</span><strong>평가와 기록</strong><small>결과 / 로그 / 산출물</small></div>
+        </div>
+        <section class="implementation-panel" aria-labelledby="industrial-implementation-title">
+          <div class="implementation-heading"><span class="label">DATA PROCESSING</span><h4 id="industrial-implementation-title">처리 단계와 기록 구조</h4></div>
+          <div class="implementation-grid">
+            <div><h5>입력 검증</h5><p>검사 대상과 정상 참조, 분석 설정이 일치하는지 확인했습니다. 작은 데이터로 전체 흐름을 먼저 점검한 뒤 실험을 확장했습니다.</p></div>
+            <div><h5>실험 기록</h5><p>설정과 평가 결과, 로그와 산출물을 함께 저장했습니다. 이전 실험의 조건을 확인하며 성능과 계산 비용을 같은 기준으로 비교했습니다.</p></div>
+          </div>
+          <p class="implementation-note">연구용 배치 처리 경험이며 상용 수집 플랫폼 운영 경력과는 구분합니다. 원본 실행 코드와 로그는 현재 페이지에 공개하지 않았습니다.</p>
+        </section>
+        <div class="result-strip">
+          <div><span class="label">NORMAL REFERENCES</span><strong>4<span>개 / 범주</span></strong></div>
+          <div><span class="label">REAL3D-AD · P-AUROC</span><strong>97.0<span>%</span></strong></div>
+          <div><span class="label">ANOMALY-SHAPENET · P-AUROC</span><strong>98.2<span>%</span></strong></div>
+          <p>별도 학습, 사전학습 모델 및 인공 이상 데이터 없이 검증.<br>최신 제출 원문의 4-shot 범주 평균 기준.</p>
+        </div>
+        <details class="project-details"><summary>연구 이력과 담당 업무 <span aria-hidden="true">＋</span></summary><div class="details-content two-column">
+          <div><h4>삼성전자 산학과제 / 2025</h4><ul><li>DX부문 생산기술연구소 스마트팩토리팀의 Few/zero-shot 산업용 검사 VLM 개발 과제 참여</li><li>PixelLM 논문과 공개 코드 분석, few-shot 파인튜닝 및 2D 이상 영역 분할 실험</li><li>MVTec AD capsule 이미지와 정답 마스크의 학습 형식 변환, 데이터 로더 구현</li><li>자연어 질의와 분할 토큰을 활용한 추론 결과 검토, 실험 결과와 한계 정리</li></ul><p class="small-note">산학과제의 초기 적용·추론 실험과 MARS의 벤치마크 성능은 별도 성과로 구분.</p></div>
+          <div><h4>MARS 개인 연구 / 2026–현재</h4><ul><li>GPU 지원 중단 이후, 정상 기준과 입력의 차이를 활용한 기존 문제의식을 학습 없는 3D 분석으로 확장</li><li>선행연구의 문제, 데이터, 방법과 한계를 같은 형식으로 정리하고 주요 공개 코드 검토</li><li>전처리와 정합, 잔차 기반 특징, 이상점수와 평가의 단계별 구현 및 검증</li><li>정상 참조만으로 점수를 보정하는 최종 방법론 설계, 구성 요소별 비교 실험과 논문 작성</li></ul><p class="small-note">연구용 파이프라인 구축 경험으로, 상용 분산 데이터 플랫폼 운영 경력과는 구분.</p></div>
+        </div></details>
+        <details class="project-details"><summary>정합과 이상점수 설계 <span aria-hidden="true">＋</span></summary><div class="details-content two-column">
+          <div><h4>형상 정합</h4><p class="detail-lead">큰 잔차가 결함 때문인지, 관측 방향이나 위치 차이 때문인지 구분하기 위해 비교 조건을 먼저 맞췄습니다.</p><ul><li>정상 참조를 공통 좌표계로 정렬하고, 관측 방향별 depth map을 미리 구성해 재사용</li><li>여러 시점의 초기 정합 후보를 유지한 채 단계적 ICP 정제 수행</li><li>모든 후보를 같은 검증 표본에서 비교하고, 국소 결함의 영향을 줄이는 lower-median 잔차로 최종 위치 선택</li></ul></div>
+          <div><h4>잔차 기반 이상점수</h4><p class="detail-lead">한 점의 거리뿐 아니라 주변 영역의 차이도 살폈습니다. 정상 참조 사이의 변동을 기준으로 각 잔차를 보정했습니다.</p><ul><li>정합된 정상 참조를 통합하고, 검사 대상에서 정상 형상까지의 최근접 거리 산출</li><li>여러 이웃 범위에서 잔차의 평균과 표준편차 추출</li><li>정상 참조 하나를 제외한 나머지와 비교하는 leave-one-out 방식으로 보정 분포 구성</li><li>경험적 상위 꼬리값을 Fisher-style 로그 집계로 결합해 이상점수 산출</li></ul><p class="small-note">집계값은 이상 순위 점수입니다. 보정된 결함 확률이나 독립성 가정에 따른 가설검정 결과는 아닙니다.</p></div>
+        </div></details>
+        <details class="project-details"><summary>벤치마크 성능과 구성 요소별 검증 <span aria-hidden="true">＋</span></summary><div class="details-content two-column">
+          <div><h4>두 벤치마크의 범주 평균 AUROC</h4><table class="evidence-table"><caption>정상 참조 4개 / 별도 학습 없음</caption><thead><tr><th scope="col">벤치마크</th><th scope="col">점 단위</th><th scope="col">객체 단위</th></tr></thead><tbody><tr><th scope="row">Real3D-AD</th><td>97.0%</td><td>91.2%</td></tr><tr><th scope="row">Anomaly-ShapeNet</th><td>98.2%</td><td>95.7%</td></tr></tbody></table><p class="detail-lead">원문 Table 1의 동일 4-shot 설정에서, 기존 방법의 최고 점 단위 보고값 대비 각각 8.8%p와 4.6%p 향상.</p><p class="small-note">방법별 학습 조건은 다르며, Table 1에는 기존 논문 보고값과 공개 코드 재현값이 함께 포함. 모든 비교 방법을 직접 재현했다는 의미는 아님.</p></div>
+          <div><h4>구성 요소와 처리 비용</h4><ul><li>단일 점 잔차의 P-AUROC 83.7%에서 최종 다중 범위 점수의 97.0%로 개선 확인</li><li>후보 선별을 제거해도 점 단위 성능은 97.0%로 동일하지만, 상대 지연은 2.10배로 증가</li><li>42개 시점과 92개 시점의 점 단위 성능이 모두 97.0%인 조건에서 처리 비용을 비교해 42개 시점 채택</li><li>외관에만 나타나는 결함과 큰 비강체 변형은 현재 범위 밖. 관측되지 않은 완전 누락 영역을 직접 점수화하지 못하는 한계 명시</li></ul><p class="small-note">수치 출처: 최신 제출 원문의 Table 2·3과 Figure 4. 구성 요소 분석과 지연 비교는 Real3D-AD의 해당 실험 조건 기준.</p></div>
+        </div></details>
+      </article>
+
+      <article class="project" id="healthcare" aria-labelledby="healthcare-title">
+        <div class="project-heading"><span class="project-index">02</span><div><p class="project-category">MULTIMODAL DATA ANALYSIS</p><h3 id="healthcare-title">영상·시선 기반 행동 분석</h3><p class="project-affiliation">DePaul University Casey Bennett 교수 연구실 / Indiana University 협업</p></div><span class="status neutral">Research Assistant</span></div>
+        <div class="project-split">
+          <div class="project-copy">
+            <p class="project-summary">자폐 스펙트럼 참여자의 VR 시선 행동을 분석했습니다. YOLO로 탐지한 객체의 바운딩박스와 시선 좌표를 비교해 프레임별 주시 대상과 행동 특징을 산출했습니다.</p>
+            <dl class="case-list">
+              <div><dt>역할</dt><dd>영상과 시선 로그 검수, YOLO 추론과 객체별 특징 산출. 임상 연구진과 분석 기준 구체화</dd></div>
+              <div><dt>데이터</dt><dd>VR 영상 프레임, 프레임 단위 시선 좌표와 장면 정보. 별도 분석 과제에서 심박변이도와 인지 게임 데이터 활용</dd></div>
+              <div><dt>처리</dt><dd>영상별 시선 기록 선별, 프레임 번호와 시간 정보에 따른 연결, YOLO 탐지 박스와 시선 좌표의 교차 판정</dd></div>
+              <div><dt>협업</dt><dd>임상 연구진의 표현을 변수와 분석 단위로 정리하고, 실제 데이터 시각화와 대조해 분석 질문 구체화</dd></div>
+            </dl>
+            <ul class="tags" aria-label="사용 기술"><li>Python</li><li>YOLO</li><li>OpenCV</li><li>Pandas</li></ul>
+          </div>
+          <figure class="gaze-figure">
+            <div class="figure-header"><span class="label">VIDEO × GAZE</span><span class="figure-note">설명용 예시</span></div>
+            <svg class="gaze-svg" viewBox="0 0 620 310" role="img" aria-labelledby="gaze-title gaze-desc">
+              <title id="gaze-title">영상의 객체 박스와 시선 좌표를 연결하는 예시</title><desc id="gaze-desc">사람, 의자, 식탁을 표현한 가상 장면 위에 객체 박스와 시선 위치를 표시한 설명용 도식입니다. 실제 참여자 영상이 아닙니다.</desc>
+              <rect width="620" height="310" rx="8" fill="#edf2f4"/>
+              <path d="M0 220H620 M0 222L140 310 M620 222L480 310" fill="none" stroke="#d3dce1"/>
+              <rect x="30" y="35" width="154" height="100" rx="3" fill="#dbe6ea"/><path d="M106 35V135 M30 85H184" stroke="#f8fafb" stroke-width="3"/>
+              <g fill="#c0cdd4"><circle cx="252" cy="91" r="25"/><path d="M221 127Q252 112 283 127L293 221H211Z"/><rect x="215" y="215" width="23" height="69" rx="5"/><rect x="265" y="215" width="23" height="69" rx="5"/></g>
+              <g fill="#c0cdd4"><rect x="340" y="150" width="60" height="58" rx="4"/><rect x="332" y="202" width="80" height="12" rx="4"/><rect x="340" y="214" width="9" height="64"/><rect x="394" y="214" width="9" height="64"/></g>
+              <path d="M440 179H578V193H440Z M452 193V278 M568 193V278" fill="#becdd4" stroke="#becdd4" stroke-width="9"/>
+              <g class="object-boxes" fill="none" stroke="#537d89" stroke-width="2"><rect x="201" y="58" width="101" height="229" rx="4"/><rect x="325" y="141" width="90" height="142" rx="4"/><rect x="429" y="170" width="159" height="116" rx="4"/></g>
+              <g class="object-boxes" font-size="13" font-family="monospace" fill="#315363"><text x="201" y="49">person</text><text x="325" y="132">chair</text><text x="429" y="160">dining table</text></g>
+              <g id="gaze-marker"><circle cx="249" cy="160" r="21" fill="#d7743e" opacity=".16"/><circle cx="249" cy="160" r="7" fill="#d7743e"/><path d="M237 160H261 M249 148V172" stroke="#d7743e" stroke-width="1.5"/></g>
+              <g id="gaze-schematic-label" transform="translate(22 264)"><rect width="228" height="28" rx="4" fill="#fff" opacity=".95"/><text x="12" y="19" font-family="monospace" font-size="12" textLength="180" lengthAdjust="spacingAndGlyphs" fill="#415968">SCHEMATIC / NOT REAL DATA</text></g>
+            </svg>
+            <div class="mapping-readout"><span class="label">GAZE TARGET</span><strong id="gaze-target" aria-live="polite">person</strong><span class="demo-label">예시 좌표 선택</span><div class="gaze-buttons" role="group" aria-label="시선 매핑 예시 선택"><button type="button" data-gaze="person" aria-pressed="true">사람</button><button type="button" data-gaze="chair" aria-pressed="false">의자</button><button type="button" data-gaze="table" aria-pressed="false">식탁</button></div></div>
+            <figcaption>탐지 객체의 위치 정보와 시선 좌표를 같은 프레임에서 결합</figcaption>
+            <p class="visual-disclaimer">개인정보 보호를 위해 새로 그린 가상 장면. 실제 YOLO 추론 결과가 아닙니다.</p>
+          </figure>
+        </div>
+        <div class="data-schema"><span class="label">FEATURE TABLE / 실제 코드의 주요 필드</span><div><code>scene_id</code><code>frame_id</code><code>gaze_x / gaze_y</code><code>has_gaze</code><code>on_object</code><code>num_yolo_boxes</code></div></div>
+        <section class="implementation-panel" aria-labelledby="gaze-implementation-title">
+          <div class="implementation-heading"><span class="label">IMPLEMENTATION EVIDENCE</span><h4 id="gaze-implementation-title">데이터 검증과 분석 테이블</h4></div>
+          <div class="implementation-grid">
+            <div><h5>입력 검증</h5><p>영상과 시선 CSV의 존재 여부, 장면과 참여자 설정의 일치를 확인했습니다. 해당 영상의 시선 기록이 없으면 처리를 중단했습니다.</p></div>
+            <div><h5>프레임별 특징</h5><p>시선 유무와 객체 교차 여부, 탐지 객체 수를 프레임별로 기록했습니다. 같은 분석 대상의 행동 라벨과 <code>frame_id</code>로 결합해 CSV로 저장했습니다.</p></div>
+          </div>
+          <p class="implementation-note">분석 스크립트와 YOLO_framework 노트북을 기준으로 정리했습니다. 필드명만 공개하며 참여자 식별값, 원본 영상과 실제 데이터는 제외했습니다.</p>
+        </section>
+        <details class="project-details code-evidence"><summary>코드 발췌: 시선–객체 교차 판정 <span aria-hidden="true">＋</span></summary><div class="details-content">
+          <p class="detail-lead">시선 좌표에 일정 반경을 두고 탐지 박스와 겹치는지 확인하는 함수입니다. 박스에 가장 가까운 점까지의 거리와 시선 반경을 비교합니다.</p>
+          <pre class="code-block" tabindex="0" aria-label="시선과 객체 박스 교차 판정 파이썬 코드"><code>def point_box_intersect(px, py, r, x1, y1, x2, y2):
+    cx = np.clip(px, x1, x2)
+    cy = np.clip(py, y1, y2)
+    dx = px - cx
+    dy = py - cy
+    return (dx*dx + dy*dy) &lt;= (r*r)</code></pre>
+          <div class="evidence-links"><a class="text-link" href="assets/evidence/gaze_box_intersection.py" download>코드 발췌 다운로드 <span aria-hidden="true">↓</span></a><a class="text-link" href="assets/evidence/test_gaze_box_intersection.py" download>가상 입력 검증 예시 <span aria-hidden="true">↓</span></a></div>
+          <p class="small-note">분석 스크립트의 함수 본문을 그대로 발췌했습니다. 원본 경로와 데이터는 제외했으며, 별도 테스트에는 포트폴리오 점검용 가상 입력을 사용했습니다.</p>
+        </div></details>
+        <details class="project-details"><summary>영상 처리와 행동 특징 <span aria-hidden="true">＋</span></summary><div class="details-content two-column">
+          <div><h4>프레임 정합과 객체 탐지</h4><ul><li>영상명과 장면 기준으로 시선 기록 선별, 프레임 번호 또는 초 단위 시간과 FPS를 이용한 영상 프레임 연결</li><li>YOLO 탐지 결과의 객체 클래스, 바운딩박스와 신뢰도를 프레임별 정보로 구성</li><li>탐지 결과를 원본 영상과 대조하고, 시선 좌표와 객체 박스의 교차 여부 확인</li><li>시선 유무와 객체 교차 상태를 구분해 시간 순서대로 정리</li></ul></div>
+          <div><h4>시선 행동 특징</h4><ul><li>객체별 시선 체류 시간과 주시 대상 전환 빈도 산출</li><li>시선 좌표의 시간 순서와 이동량을 이용한 scanpath 분석</li><li>시선 좌표와 주시 객체 정보를 함께 반영</li><li>연구진의 장면 및 행동 라벨을 반영한 분석 자료 구성</li></ul><p class="small-note">기존 YOLO 모델을 행동 분석에 적용한 연구입니다. 자체 객체 탐지 모델 개발이나 임상 진단 성능 검증과는 구분합니다.</p></div>
+        </div></details>
+        <details class="project-details"><summary>임상 협업과 분석 기준 <span aria-hidden="true">＋</span></summary><div class="details-content two-column">
+          <div><h4>용어와 해석 기준</h4><p class="detail-lead">같은 수치도 생성 조건과 임상적 의미에 따라 해석이 달랐습니다. 연구진의 설명을 실제 데이터와 대조하며 분석 기준을 맞췄습니다.</p><ul><li>설명한 현상과 제가 이해한 의미, 확인할 변수와 분석 단위를 공통 표로 정리</li><li>회의 전 실제 데이터 시각화를 준비하고 임상 연구진의 설명과 대조</li><li>연구진의 의학적 보완과 데이터로 검증 가능한 범위를 반영해 분석 질문 수정</li></ul></div>
+          <div><h4>후속 가설과 분석 방향</h4><ul><li>직접 확인하기 어려운 요청에는 다른 분석 방법과 검증 범위 제안</li><li>DePaul University와 Indiana University 보건학 연구진에 영어로 진행 상황과 결과 공유</li><li>시선 행동과 심박변이도 등에서 발견한 패턴을 임상 맥락에서 검토</li><li>분석 결과를 새로운 가설과 후속 연구 방향으로 정리</li></ul></div>
+        </div></details>
+        <details class="project-details"><summary>별도 연구: 인간–에이전트 상호작용과 음성 분석 <span aria-hidden="true">＋</span></summary><div class="details-content two-column">
+          <div><h4>발화 데이터 정제</h4><ul><li>한국어·영어 및 단일언어·이중언어 조건의 사용자 실험 운영과 데이터 수집</li><li>Google Cloud 화자 분리와 음성 전사 결과를 원본 영상과 대조해 화자 및 발화 구간 오류 검수</li><li>발화량과 감성 비율 산출, 타임스탬프가 겹치는 구간의 대화 중단 라벨링</li><li>사람과 에이전트의 발화를 구분해 실험 조건별로 비교 가능한 데이터 구성</li></ul></div>
+          <div><h4>언어와 실험 조건별 통계 분석</h4><ul><li>영어 VADER와 한국어용 감성 사전을 활용한 발화 감성 분석</li><li>발화량 차이를 고려한 비율 비교와 결과 시각화</li><li>t-test와 ANOVA를 활용한 언어·실험 조건별 차이 검증</li><li>이중언어 조건에서 언어 전환 순서의 영향 확인</li></ul><p class="small-note">이 별도 연구에 참여해 SCIE 논문 2편 공저. 자폐 시선 분석 과제의 게재 성과와 구분.</p></div>
+        </div></details>
+      </article>
+
+      <article class="project" id="todoc" aria-labelledby="todoc-title">
+        <div class="project-heading"><span class="project-index">03</span><div><p class="project-category">KNOWLEDGE DATA & RAG SERVICE</p><h3 id="todoc-title">ToDoc — 개인화 육아지원 서비스</h3><p class="project-affiliation">한양대학교 팀 프로젝트 / HCI Korea 2026 학술대회 논문집 게재</p></div><span class="status neutral">서비스 설계·구현 참여</span></div>
+        <div class="project-split">
+          <div class="project-copy">
+            <p class="project-summary">공공기관의 육아 문서와 아동 기록을 참고하는 RAG 기반 상담 서비스입니다. 상담 목적에 따라 검색 자료와 프롬프트를 구분하고, 개인 기록을 답변에 반영했습니다.</p>
+            <dl class="case-list">
+              <div><dt>역할</dt><dd>RAG 상담 구조 설계·구현 참여, 오류 사례 분석과 사용자 평가, 기능 점검 및 화면 흐름 보완</dd></div>
+              <div><dt>문제</dt><dd>정보의 출처와 아동의 상황을 함께 고려해야 했습니다. 상담 목적과 관계없는 자료가 검색되면 답변의 초점도 흐려졌습니다.</dd></div>
+              <div><dt>구현</dt><dd>맘·닥터·영양 AI별 문서 집합과 프롬프트 분리, 검색된 근거와 육아일지 정보를 결합한 개인화 상담</dd></div>
+              <div><dt>개선</dt><dd>응답 누락과 검색 관련성, 문맥 오류의 재현 조건 기록. 사용자 의견에 따라 안내 문구와 화면 구성 보완</dd></div>
+            </dl>
+            <ul class="tags" aria-label="활용 방법"><li>LLM</li><li>RAG</li><li>Role-based Prompting</li><li>User Feedback</li></ul>
+          </div>
+          <figure class="rag-figure">
+            <div class="figure-header"><span class="label">KNOWLEDGE & CONTEXT</span><span class="figure-note">구조 요약</span></div>
+            <div class="rag-sources"><div><span class="source-icon" aria-hidden="true">▤</span><strong>공공기관 문서</strong><small>육아 / 건강 / 영양 정보</small></div><div><span class="source-icon" aria-hidden="true">▦</span><strong>아동 기록</strong><small>성장 / 건강 / 생활 맥락</small></div></div>
+            <div class="rag-connector" aria-hidden="true"><span></span><span></span></div>
+            <div class="rag-core"><span class="label">RETRIEVAL + USER CONTEXT</span><strong>검색 근거와 개인 기록의 결합</strong></div>
+            <div class="rag-down" aria-hidden="true">↓</div>
+            <div class="rag-roles"><div><span>01</span><strong>맘 AI</strong><small>공감과 생활 상담</small></div><div><span>02</span><strong>닥터 AI</strong><small>신중한 의학 정보</small></div><div><span>03</span><strong>영양 AI</strong><small>식단과 영양 정보</small></div></div>
+            <figcaption>상담 역할별 검색 범위와 프롬프트 구분. 도식은 서비스 구조를 요약한 것이며, 단일 공통 검색기를 의미하지 않습니다.</figcaption>
+          </figure>
+        </div>
+        <section class="implementation-panel" aria-labelledby="todoc-implementation-title">
+          <div class="implementation-heading"><span class="label">KNOWLEDGE DATA</span><h4 id="todoc-implementation-title">검색 자료와 아동 기록</h4></div>
+          <div class="implementation-grid">
+            <div><h5>역할별 검색 자료</h5><p>공공 문서를 맘, 닥터, 영양 상담별로 나눴습니다. 각 역할의 문서 인덱스와 프롬프트를 구성하는 데 참여했습니다.</p></div>
+            <div><h5>개인 기록 반영</h5><p>공공 문서는 답변의 근거로, 아동 기록은 개인 맥락으로 구분했습니다. 최근 육아일지와 성장 및 생활 정보를 답변에 반영하는 구조를 함께 설계했습니다.</p></div>
+          </div>
+          <div class="evidence-links"><a class="text-link" href="https://github.com/edonge/TODOC" target="_blank" rel="noopener noreferrer">공개 팀 저장소 <span aria-hidden="true">↗</span></a><a class="text-link" href="https://github.com/edonge/TODOC/blob/main/backend/app/llm/vector_loader.py" target="_blank" rel="noopener noreferrer">문서 인덱스 로더 <span aria-hidden="true">↗</span></a><a class="text-link" href="https://github.com/edonge/TODOC/blob/main/backend/app/llm/service.py" target="_blank" rel="noopener noreferrer">육아일지 맥락 구성 <span aria-hidden="true">↗</span></a></div>
+          <p class="implementation-note">링크된 파일은 팀 공동 구현물입니다. 저는 상담 구조 설계와 구현, 오류 점검 및 사용 흐름 개선에 참여했습니다.</p>
+        </section>
+        <div class="project-bottom"><p><span class="label">VALIDATION</span>29명 부모 대상 초기 사용자 평가. 상황 적합성과 대화 편의성에 대한 긍정적 의견 및 응답 속도와 공감 표현의 개선 필요 확인.</p><a class="text-link" href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE12746090" target="_blank" rel="noopener noreferrer">학술대회 논문 <span aria-hidden="true">↗</span></a></div>
+        <details class="project-details"><summary>RAG 구조와 개인화 상담 <span aria-hidden="true">＋</span></summary><div class="details-content two-column">
+          <div><h4>역할별 검색 범위</h4><ul><li>교육청, 보건복지부, 식품의약품안전처와 질병관리청 등 공공기관의 육아 자료 활용</li><li>맘·닥터·영양 AI별로 참조 문서 집합을 나눠 상담 목적과 관계없는 정보의 혼입을 줄이는 방향으로 설계</li><li>맘 AI의 공감 중심 상담과 닥터 AI의 신중한 의학 정보 등 역할별 표현 기준을 프롬프트에 반영</li><li>개인화 대화 시스템과 RAG, LLM 에이전트 선행연구를 검토하고 서비스 설계에 적용</li></ul></div>
+          <div><h4>아동 기록 활용</h4><ul><li>공공 문서를 조언의 근거로, 아동의 성장·건강·생활 기록을 개인 맥락으로 활용</li><li>검색 문서와 육아일지 정보를 생성 맥락에 함께 전달하는 상담 흐름 구현 참여</li><li>아동 기록 관리와 상담 기능 연계</li><li>상담, 기록 관리와 부모 커뮤니티 기능 구성</li></ul><p class="small-note">역할별 상담 구조를 개발한 팀 프로젝트입니다. 기업 규모의 지식 관리나 의료 진단 서비스 운영 경험과는 구분합니다.</p></div>
+        </div></details>
+        <details class="project-details"><summary>오류 점검과 사용자 피드백 <span aria-hidden="true">＋</span></summary><div class="details-content two-column">
+          <div><h4>오류 재현과 기능 점검</h4><ul><li>응답 누락, 관련 없는 검색 결과와 육아 상황의 문맥 오류를 유형별로 분류</li><li>오류를 다시 확인할 조건과 수정 필요성을 정리해 반복되는 문제부터 점검</li><li>검색 문서와 프롬프트를 다시 검토하고 안내 문구, 버튼 배치와 화면별 흐름 보완</li><li>기능 안정성과 UI 개선 의견을 함께 검토해 우선순위와 역할 조정</li></ul></div>
+          <div><h4>사용자 평가</h4><ul><li>29명 부모의 초기 사용성 평가와 주관식 의견 분석</li><li>아동 기록을 반영한 조언의 상황 적합성과 대화 편의성에 대한 긍정적 의견 확인</li><li>응답 속도의 일관성과 맘 AI의 공감 표현 부족을 후속 개선 항목으로 정리</li><li>개발 내용과 실제 사용에서 확인한 한계를 HCI Korea 2026 논문으로 정리</li></ul><p class="small-note">초기 사용자 수용성을 확인한 연구입니다. 장기 효과나 기존 서비스 대비 통계적 우월성을 검증한 연구는 아닙니다.</p></div>
+        </div></details>
+      </article>
+    </section>
+
+    <section class="research-section" id="research" aria-labelledby="research-title"><div class="wrap">
+      <div class="section-heading"><div><p class="eyebrow">02 / RESEARCH OUTPUT</p><h2 id="research-title">논문</h2></div><p>게재 논문 및 심사 중 연구</p></div>
+      <ol class="paper-list">
+        <li><span class="paper-year">2027</span><div><p class="paper-venue">ICLR 2027 · 제출·심사 중 · 제1저자</p><h3>Training-Free 3D Anomaly Detection via Viewpoint-Preserving Alignment and Residual Calibration</h3><p class="paper-role">MARS 방법론 설계, 실험과 결과 분석 및 논문 작성 주도</p></div><span class="paper-state">Under review</span></li>
+        <li><span class="paper-year">2026</span><div><p class="paper-venue">HCI Korea 2026 Proceedings · 공저</p><h3><a href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE12746090" target="_blank" rel="noopener noreferrer">ToDoc: 개인화 및 RAG 기반의 대규모 언어 모델을 활용한 AI 육아 지원 시스템 <span aria-hidden="true">↗</span></a></h3><p class="paper-role">역할별 AI 상담 구조와 사용자 평가, 서비스 개선에 참여</p></div><span class="paper-state">Conference</span></li>
+        <li><span class="paper-year">2024</span><div><p class="paper-venue">International Journal of Human–Computer Interaction · SCIE · 공저</p><h3><a href="https://doi.org/10.1080/10447318.2023.2261728" target="_blank" rel="noopener noreferrer">Cognitive Shifts in Bilingual Speakers Affect Speech Interactions with Artificial Agents <span aria-hidden="true">↗</span></a></h3><p class="paper-role">사용자 실험과 발화 데이터 정제, 감성·대화 중단 분석 및 집단 비교</p></div><span class="paper-state">Journal</span></li>
+        <li><span class="paper-year">2023</span><div><p class="paper-venue">Computer Speech & Language · SCIE · 공저</p><h3><a href="https://www.sciencedirect.com/science/article/abs/pii/S0885230823000402" target="_blank" rel="noopener noreferrer">Effects of Cross-Cultural Language Differences on Social Cognition During Human-Agent Interaction in Cooperative Game Environments <span aria-hidden="true">↗</span></a></h3><p class="paper-role">음성·영상·설문 수집, 화자·전사 검수 및 실험 조건별 통계 분석</p></div><span class="paper-state">Journal</span></li>
+      </ol>
+      <p class="research-note">연도는 학술지 권호 또는 학회 연도 기준. ICLR은 채택·게재 성과가 아닌 제출·심사 중 연구로 구분했습니다.</p>
+    </div></section>
+
+    <section class="experience-section wrap" id="experience" aria-labelledby="experience-title">
+      <div class="section-heading"><div><p class="eyebrow">03 / EXPERIENCE & EDUCATION</p><h2 id="experience-title">경험과 학력</h2></div><button class="text-button" id="print-cv" type="button">인쇄 / PDF 저장 <span aria-hidden="true">↗</span></button></div>
+      <div class="experience-grid">
+        <div class="timeline">
+          <article><p class="timeline-period">2025.01–현재</p><div><h3>한양대학교 MLLM 연구실</h3><p class="timeline-role">학부 인턴 / 백성용 교수</p><p>산업 검사 VLM 산학과제와 3D 이상탐지 개인 연구. 실험 파이프라인 구축과 검증, 논문 작성.</p></div></article>
+          <article><p class="timeline-period">2021.08–현재</p><div><h3>DePaul University Healthcare AI 연구실</h3><p class="timeline-role">Research Assistant / Casey Bennett 교수</p><p>헬스케어 및 인간–에이전트 상호작용 연구. 데이터 수집·분석과 해외 연구진 협업.</p></div></article>
+          <article><p class="timeline-period">2024.10–2026.08</p><div><h3>한양대학교 영자신문사 한양저널</h3><p class="timeline-role">부장기자</p><p>현장 취재와 인터뷰, 영문 기사 작성과 원고 검토. 기사 주제와 취재 방향 조율.</p></div></article>
+        </div>
+        <aside class="education-card"><span class="label">EDUCATION</span><h3>한양대학교</h3><p>데이터사이언스학부</p><p class="education-date">2021.03–2027.02<br>학사 졸업 예정</p><hr><span class="label">PROJECT-BASED EXPERIENCE</span><ul><li>Python 기반 데이터 처리</li><li>컴퓨터 비전 모델 적용과 검증</li><li>통계 분석과 결과 시각화</li><li>LLM / RAG 서비스 개발</li><li>영문 논문과 기사 작성</li></ul></aside>
+      </div>
+    </section>
+
+    <footer id="contact"><div class="wrap footer-inner"><div><p class="eyebrow">CONTACT</p><h2>류의재 <span>Uijae Ryu</span></h2><a href="mailto:ruby3288@naver.com">ruby3288@naver.com <span aria-hidden="true">↗</span></a></div><div class="footer-meta"><a href="#top" class="text-link">맨 위로 <span aria-hidden="true">↑</span></a><p>Data & AI Project Portfolio<br>2026.10 업데이트</p></div></div></footer>
+  </main>
+  <noscript><p class="noscript-notice">프로젝트 내용은 JavaScript 없이도 읽을 수 있습니다. 단계별 모식도 선택과 인쇄 버튼은 JavaScript를 사용합니다.</p></noscript>
+</body>
+</html>
